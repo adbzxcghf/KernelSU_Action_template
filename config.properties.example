@@ -1,17 +1,17 @@
 KERNEL_SOURCE=https://github.com/adbzxcghf/kernel_xiaomi_picasso.git
 KERNEL_SOURCE_BRANCH=thirteen
 KERNEL_CONFIG=vendor/picasso_user_defconfig
-KERNEL_IMAGE_NAME=
+KERNEL_IMAGE_NAME=Image
 ARCH=arm64
 
 ENABLE_CLANG=true
 USE_AOSP_CLANG=true
 AOSP_CLANG_SYSTEM=linux-x86
 AOSP_CLANG_BRANCH=master
-AOSP_CLANG_VERSION=r450784e
+AOSP_CLANG_VERSION=r416183b
 USE_CUSTOM_CLANG=false
-CUSTOM_CLANG_SOURCE=https://github.com/magojohnji/ZyCromerZ-Clang.git
-CUSTOM_CLANG_BRANCH=main
+CUSTOM_CLANG_SOURCE=https://github.com/kdrag0n/proton-clang.git
+CUSTOM_CLANG_BRANCH=master
 
 ENABLE_GCC=true
 ENABLE_AOSP_GCC_ARM64=true
@@ -31,7 +31,7 @@ CUSTOM_GCC_32_BRANCH=
 CUSTOM_GCC_32_BIN=arm-linux-androideabi-
 
 ENABLE_KERNELSU=true
-KERNELSU_INSTALLER=
+KERNELSU_INSTALLER="https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
 KERNELSU_TAG=main
 KSU_EXPECTED_SIZE=
 KSU_EXPECTED_HASH=
@@ -39,12 +39,12 @@ BUILD_KERNELSU_BOOT_IMG=true
 KERNELSU_SOURCE_BOOT_IMAGE=
 
 DISABLE-LTO=false
-DISABLE_CC_WERROR=false
+DISABLE_CC_WERROR=ture
 ADD_KPROBES_CONFIG=true
 ADD_OVERLAYFS_CONFIG=true
 ENABLE_CCACHE=true
 NEED_DTBO=false
 BUILDER_HOST=Github-Action
 
-TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu-
+TC_CUSTOM_CMDS:CLANG_TRIPLE=aarch64-linux-gnu- 
 EXTRA_CMDS:LD=ld.lld
