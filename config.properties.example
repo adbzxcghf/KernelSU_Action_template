@@ -1,6 +1,6 @@
-KERNEL_SOURCE=
-KERNEL_SOURCE_BRANCH=
-KERNEL_CONFIG=
+KERNEL_SOURCE=https://github.com/adbzxcghf/kernel_xiaomi_picasso.git
+KERNEL_SOURCE_BRANCH=thirteen
+KERNEL_CONFIG=vendor/picasso_user_defconfig
 KERNEL_IMAGE_NAME=
 ARCH=arm64
 
